@@ -1,5 +1,10 @@
 import React from "react";
 
-export default function TodoItem(props) {
-  return <li>{props.text}</li>;
+export default function TodoItem({ text, onDelete }) {
+  return (
+    <li>
+      {text}
+      <button onClick={onDelete}>X</button>
+    </li>
+  );
 }
